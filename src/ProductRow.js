@@ -4,12 +4,12 @@ function ProductRow(props) {
   return (
     <>
       <tr>
-        {props.products.inStock ? (
-          <td>{props.products.name}</td>
+        {props.filterProducts.inStock ? (
+          <td>{props.filterProducts.name}</td>
         ) : (
-          <td style={{ color: 'red' }}>{props.products.name}</td>
+          <td style={{ color: 'red' }}>{props.filterProducts.name}</td>
         )}
-        <td>{props.products.price}</td>
+        <td>{props.filterProducts.price}</td>
       </tr>
     </>
   );

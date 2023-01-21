@@ -2,7 +2,7 @@ import React from 'react';
 import ProductRow from '../ProductRow';
 
 function ProductTable(props) {
-  const { products } = props;
+  const { filterProducts } = props;
 
   return (
     <>
@@ -11,8 +11,13 @@ function ProductTable(props) {
           <th>Name</th>
           <th>Price</th>
         </tr>
-        {products.map((products) => {
-          return <ProductRow products={products} key={products.id} />;
+        {filterProducts.map((filterProducts) => {
+          return (
+            <ProductRow
+              filterProducts={filterProducts}
+              key={filterProducts.id}
+            />
+          );
         })}
       </table>
     </>
